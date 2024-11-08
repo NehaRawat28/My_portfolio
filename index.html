@@ -1,0 +1,415 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neha-Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: rgb(18, 18, 62);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+
+        }
+        nav ul li a{
+           text-decoration: none;
+           color: white;
+        }
+        nav ul li a:hover{
+            color: rgb(153, 153, 235);
+            font-size: 1.02rem;
+        }
+        main hr{
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 0;
+            align-items: center;
+            margin: 130px 0;
+            
+        }
+        .firstSection > div{
+           width: 30%;
+           
+        }
+        .leftSection{
+           font-size: 3rem;
+          
+          
+        }
+        .leftSection .buttons{
+            padding: 50px 0;
+        }
+        .leftSection .btn{
+           padding: 12px;
+           background-color:rgb(20, 3, 20) ;
+           color: white;
+           border: 2px;
+           border-color: solid white;
+           border-radius: 3px;
+           font-size: 20px;
+           cursor: pointer;
+          
+          
+        }
+        .leftSection .btn:hover{
+            color: brown;
+        }
+        .rightSection img{
+           width: 80%;
+           
+        }
+        .purple{
+            color:rgb(170, 107, 228);
+
+        }
+        #element{
+            color:rgb(170, 107, 228);
+
+        }
+        .text-gray{
+            color: gray;
+        }
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+            height: 60vh;
+        }
+        .secondSection h1{
+            font-size: 1.9rem;
+        }
+        .secondSection .box{
+            background: white;
+            width: 85vw;
+            height: 20px;
+            margin: 56px 0;
+            display: flex;
+        }
+        .secondSection .vertical{
+            height: 70px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+        .image-top{
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+        .vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Adds spacing between vertical sections */
+}
+
+.verticaltext {
+    top: 200px;
+    margin-top: 10px; /* Adjust top margin instead of position */
+    width: 150px;
+    font-size: 14px;
+    text-align: center; /* Center the text */
+}
+
+.vertical-desc {
+    margin-top: 5px; /* Adjust top margin instead of position */
+    color: gray;
+    width: 250px;
+    font-size: 15px;
+    text-align: center; /* Center the text */
+}
+
+.image-top {
+    width: 50px; /* Adjust image size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Spacing between image and title */
+}
+
+/* Optional: Add a hover effect for better interaction */
+.vertical:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+.third-section {
+    max-width: 80vw;
+    margin-bottom: 40px;
+    margin: auto;
+    padding: 20px; /* Add padding for better spacing */
+    height: 60vh; /* Allow height to adjust based on content */
+}
+
+.third-section h1 {
+    font-size: 1.9rem; /* Adjust heading size */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.third-section .box {
+    background: white;
+            width: 85vw;
+            height: 20px;
+            margin: 56px 0;
+            display: flex;
+}
+
+.third-section .vertical {
+    height: 70px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+}
+
+.image-top {
+    width: 50px; /* Adjust image size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.vertical-text {
+    font-size: 14px; /* Size for project titles */
+    margin-left: 10px; /* Space between title and description */
+    text-align: left; /* Align text to the left */
+}
+
+.vertical-desc {
+    color: gray; /* Description color */
+    font-size: 15px; /* Size for descriptions */
+    margin-left: 10px; /* Space between title and description */
+    text-align: left; /* Align text to the left */
+}
+
+/* Optional: Add a hover effect for better interaction */
+.vertical:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .third-section {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .third-section h1 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .third-section .vertical {
+        width: calc(45% - 40px); /* Adjust width for 2 items per row on smaller screens */
+    }
+
+    .vertical-text, .vertical-desc {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .image-top {
+        width: 40px; /* Smaller images on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .third-section .vertical {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+
+
+
+footer {
+    /*background-color: #333; /* Dark background for the footer */
+    color: white; /* White text color */
+    padding: 20px 0; /* Padding for top and bottom */  
+    background-color: #333; /* Dark background for the footer */
+    color: white; /* White text color */
+    padding: 20px 0; /* Top and bottom padding */
+    clear: both; 
+}
+
+.footer {
+    max-width: 60vw; /* Max width for the footer */
+    margin: auto; /* Center the footer */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.footer-first {
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.footer-second ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Space between items */
+}
+
+.footer-second li {
+    display: inline; /* Display list items inline */
+}
+
+.footer-second a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.footer-second a:hover {
+    color: #ddd; /* Change color on hover */
+}
+
+.footer-fourth {
+    margin-top: 20px; /* Space above the rights text */
+    text-align: center; /* Center the rights text */
+}
+
+.footer-rights {
+    font-size: 0.9rem; /* Smaller font size for rights */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Neha Rawat</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+
+        <section id="home" class="firstSection">
+            <div class="leftSection">Hi, My name is <span class="purple"> Neha Rawat</span>
+                
+                <div>and I am a  Web Developer</div>
+                
+                <span id="element"></span>
+                <div class="button">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.jpg" alt="">
+            </div>
+
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">what I have done so far</span>
+            <h1>Skills</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="html.jpg" alt="Developer Icon">
+                    <div class="verticaltext">HTML</div>
+                    <div class="vertical-desc">Elements, lists, tables, forms, etc.</div>
+                </div>
+            
+                <div class="vertical">
+                    <img class="image-top" src="css.webp" alt="Developer Icon">
+                    <div class="verticaltext">CSS</div>
+                    <div class="vertical-desc">Properties, box model, styling, responsiveness, flexbox, etc.</div>
+                </div>
+            
+                <div class="vertical">
+                    <img class="image-top" src="js.png" alt="Developer Icon">
+                    <div class="verticaltext">JavaScript</div>
+                    <div class="vertical-desc">Variables, data types, comparison, arrays, objects, functions, etc.</div>
+                </div>
+            
+                <div class="vertical">
+                    <img class="image-top" src="cpp.png" alt="Developer Icon">
+                    <div class="verticaltext">C++</div>
+                    <div class="vertical-desc">Object-oriented programming, memory management, data structures, etc.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="dsa.webp" alt="Developer Icon">
+                    <div class="verticaltext">DSA</div>
+                    <div class="vertical-desc">Data Structures and Algorithms using C++</div>
+                </div>
+            </div>
+            
+            
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Neha's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+            <div class="footer-third"></div>
+            <div class="footer-fourth">
+                <div class="footer-rights">
+                    www.nehasportfolio.com | All rights reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/typed.js02.0.16/dist/typed.umd.js"></script>
+    <!--Setup and start animation!-->
+    <script>
+        
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+
+        const targetId = this.getAttribute('href'); // Get the target section ID
+        const targetSection = document.querySelector(targetId); // Select the section
+
+        targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the section smoothly
+    });
+});
+
+
+    </script>
+    
+</body>
+</html>
