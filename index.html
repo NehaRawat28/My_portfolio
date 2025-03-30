@@ -109,7 +109,7 @@
         }
         .secondSection .box{
             background: white;
-            width: 85vw;
+            width: 100vw;
             height: 20px;
             margin: 56px 0;
             display: flex;
@@ -175,7 +175,7 @@
 
 .third-section .box {
     background: white;
-            width: 85vw;
+            width: 95vw;
             height: 20px;
             margin: 56px 0;
             display: flex;
@@ -305,15 +305,36 @@ footer {
             <div class="left">Neha Rawat</div>
             <div class="right">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact Me</a></li>
+                    <li><a href="#" onclick="showContent('home')">Home</a></li>
+                    <li><a href="#" onclick="showContent('about')">About</a></li>
+                    <li><a href="#" onclick="showContent('skills')">Skills</a></li>
+                    <li><a href="#" onclick="showContent('projects')">Projects</a></li>
+                    <li><a href="#" onclick="showContent('contact')">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    
+    <!-- Dynamic Content Container -->
+    <div id="content">
+        <h2>Welcome!</h2>
+        <p>Click on the menu to see content.</p>
+    </div>
+    
+    <script>
+        function showContent(section) {
+            const content = {
+                home: "<h2>Home</h2><p>Hello! My name is Neha Rawat and I am a Web Developer. Welcome to my portfolio!</p>",
+                about: "<h2>About</h2><p>I am Neha Rawat, Aspiring web developer with experience in the MERN stack, React.js, and JavaScript. Passionate about building user-friendly, responsive applications. Looking for an internship where I can enhance my skills, work on real-world projects, and collaborate with industry professionals.</p>",
+                skills: "<h2>Skills</h2><p>HTML, CSS, JavaScript, React JS, DSA in C++</p>",
+                projects: "<h2>Projects</h2><p>Check out my amazing projects.</p>",
+                contact: "<h2>Contact Me</h2><p>Email: nr.neha9990@gmail.com</p>",
+            };
+    
+            document.getElementById("content").innerHTML = content[section];
+        }
+    </script>
+    
     <main>
         
 
@@ -322,11 +343,19 @@ footer {
                 
                 <div>and I am a  Web Developer</div>
                 
-                <span id="element"></span>
-                <div class="button">
-                    <button class="btn">Download Resume</button>
-                    <button class="btn">Visit Github</button>
-                </div>
+                <button class="btn" id="downloadResume">Download Resume</button>
+<button class="btn" id="visitGithub">Visit Github</button>
+
+<script>
+    document.getElementById("downloadResume").addEventListener("click", function() {
+        window.location.href = "file:///C:/Users/rneha/OneDrive/Documents/kanchan/3rd%20sem/NEHARAWAT_RESUME.pdf"; // Change to your actual resume link
+    });
+
+    document.getElementById("visitGithub").addEventListener("click", function() {
+        window.open("https://github.com/NehaRawat28", "_blank");
+    });
+</script>
+
             </div>
             <div class="rightSection">
                 <img src="bg.jpg" alt="">
@@ -353,6 +382,11 @@ footer {
                 <div class="vertical">
                     <img class="image-top" src="js.png" alt="Developer Icon">
                     <div class="verticaltext">JavaScript</div>
+                    <div class="vertical-desc">Variables, data types, comparison, arrays, objects, functions, etc.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="React-icon.svg.png" alt="Developer Icon">
+                    <div class="verticaltext">React JS</div>
                     <div class="vertical-desc">Variables, data types, comparison, arrays, objects, functions, etc.</div>
                 </div>
             
